@@ -1,0 +1,5 @@
+eda:false
+selin:true
+damla:true
+berk:false
+seyda1:false

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="431.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.social_network_demo.RegisterController">
+   <children>
+      <AnchorPane prefHeight="71.0" prefWidth="638.0" style="-fx-background-color: PURPLE;">
+         <children>
+            <Label layoutX="74.0" layoutY="24.0" text="User Registration" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+            </Label>
+            <AnchorPane id="root2" layoutX="22.0" layoutY="13.0" prefHeight="45.0" prefWidth="45.0" stylesheets="@../../../images/still.css" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="registrationMessageLabel" alignment="CENTER" layoutX="18.0" layoutY="81.0" prefHeight="23.0" prefWidth="520.0" textFill="#bc0d0d">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="confirmPasswordLabel" alignment="CENTER" layoutX="94.0" layoutY="277.0" prefHeight="17.0" prefWidth="367.0" textFill="#bc0d0d">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="124.0" layoutY="93.0" prefHeight="299.0" prefWidth="389.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.6666259765625" minWidth="10.0" prefWidth="134.6666259765625" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="217.3333740234375" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="35.99999237060547" minHeight="10.0" prefHeight="33.33331298828125" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="37.66667683919271" minHeight="10.0" prefHeight="37.66667683919271" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="33.333343505859375" minHeight="10.0" prefHeight="33.333343505859375" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="32.66666666666666" minHeight="10.0" prefHeight="32.66666666666666" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="32.66667175292969" minHeight="10.0" prefHeight="32.66667175292969" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="63.66666666666666" minHeight="10.0" prefHeight="41.33332824707031" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="83.33334350585935" minHeight="6.000010172526032" prefHeight="36.666646321614564" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="105.33335367838541" minHeight="10.0" prefHeight="56.66668701171875" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Mail Adress" GridPane.rowIndex="2">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="mailAdressTextField" prefHeight="25.0" prefWidth="336.0" promptText="Mail Adress" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label text="Username" GridPane.rowIndex="3">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameTextField" prefHeight="25.0" prefWidth="336.0" promptText="Username" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Password" GridPane.rowIndex="4">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="passwordTextField" prefHeight="25.0" prefWidth="336.0" promptText="Password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label text="Confirm Password" GridPane.rowIndex="5">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="confirmPasswordTextField" prefHeight="25.0" prefWidth="336.0" promptText="Confirm Password" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label text="Choose Image" GridPane.rowIndex="6" />
+            <ComboBox id="root7" fx:id="chooseImage" prefHeight="28.0" prefWidth="79.0" promptText="Resim" GridPane.columnIndex="1" GridPane.rowIndex="6">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ComboBox>
+            <Button mnemonicParsing="false" onAction="#Kayitİslem" prefHeight="34.0" prefWidth="107.0" style="-fx-background-color: PURPLE;" text="Register" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#cancelButtonClicked" prefHeight="34.0" prefWidth="114.0" style="-fx-background-color: PURPLE;" text="Cancel" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial Bold" size="19.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="120.0" />
+               </GridPane.margin>
+            </Button>
+            <Label text="Ad">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label text="Soyad" GridPane.rowIndex="1">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameTextField" prefHeight="25.0" prefWidth="336.0" promptText="Ad" GridPane.columnIndex="1" />
+            <TextField fx:id="lastnameTextField" prefHeight="25.0" prefWidth="336.0" promptText="Soyad" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="root1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="638.0" stylesheets="@../../../images/still.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.social_network_demo.LoginController">
+   <children>
+      <Pane layoutX="188.0" layoutY="5.0" prefHeight="421.0" prefWidth="262.0" style="-fx-background-color: PURPLE; -fx-background-radius: 50;">
+         <children>
+            <Label alignment="CENTER" layoutX="92.0" layoutY="87.0" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="32.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="67.0" layoutY="134.0" text="Please login to continue" textFill="#f6f6f6">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameTextField" alignment="CENTER" layoutX="57.0" layoutY="186.0" onKeyReleased="#Login" promptText="Username" />
+            <Button fx:id="login" alignment="CENTER" layoutX="57.0" layoutY="284.0" mnemonicParsing="false" onAction="#Login1" onKeyReleased="#Login" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: BLUE;" text="Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font></Button>
+            <Button fx:id="createAccount" layoutX="57.0" layoutY="319.0" mnemonicParsing="false" onAction="#registerButtonClicked" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: BLUE;" text="Create Account" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="13.0" />
+               </font>
+            </Button>
+            <PasswordField fx:id="passwordTextField" alignment="CENTER" layoutX="56.0" layoutY="231.0" onKeyReleased="#Login" promptText="Password" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

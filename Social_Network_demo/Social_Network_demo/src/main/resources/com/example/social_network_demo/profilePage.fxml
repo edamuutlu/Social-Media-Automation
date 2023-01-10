@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="431.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.social_network_demo.profilePageController">
+   <top>
+      <HBox prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: THISTLE;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="profilImage" fitHeight="64.0" fitWidth="81.0" pickOnBounds="true" preserveRatio="true" />
+            <Pane prefHeight="65.0" prefWidth="504.0" style="-fx-background-color: WHİTE;" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label fx:id="mailLabel" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="91.0" text="mail" />
+                  <Label fx:id="usernameLabel" layoutX="14.0" layoutY="33.0" prefHeight="17.0" prefWidth="91.0" text="username" />
+               </children>
+            </Pane>
+            <Button fx:id="logoutButton" contentDisplay="CENTER" mnemonicParsing="false" onAction="#logOutButtonClicked" prefHeight="33.0" prefWidth="41.0" styleClass="buttonLogout" stylesheets="@../../../images/still.css" textAlignment="CENTER" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </HBox.margin>
+               <graphic>
+                  <ImageView fx:id="img" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="451.0" prefWidth="10.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <Button layoutX="263.0" layoutY="224.0" mnemonicParsing="false" onAction="#seeMyFriendButtonClicked" style="-fx-background-color: PURPLE;" text="See My Friends" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font></Button>
+                  <Button layoutX="264.0" layoutY="176.0" mnemonicParsing="false" onAction="#AddFriendButtonClicked" prefHeight="28.0" prefWidth="129.0" style="-fx-background-color: PURPLE;" text="Add Friends" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font></Button>
+                  <Label fx:id="myWallLabel" alignment="CENTER" layoutX="-66.0" prefHeight="90.0" prefWidth="743.0" styleClass="greeting" stylesheets="@../../../images/still.css" text="greeting">
+                     <font>
+                        <Font name="Consolas" size="19.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="262.0" layoutY="128.0" mnemonicParsing="false" onAction="#editMyProfileButtonClicked" prefHeight="28.0" prefWidth="132.0" style="-fx-background-color: PURPLE;" text="Edit My Profile" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font></Button>
+                  <Button layoutX="264.0" layoutY="272.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="129.0" style="-fx-background-color: PURPLE;" text="Remove Friend" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children></Pane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
